@@ -6,7 +6,7 @@ const INSERT = 'ins';
 const SUBSTITUTE = 'sub';
 
 // typed Array
-const TypedArray = global.Int32Array || Array;
+const TypedArray = self.Int32Array || Array;
 
 const majinbuu = (from, to, MAX_SIZE) => {
 
@@ -28,7 +28,7 @@ const majinbuu = (from, to, MAX_SIZE) => {
     from,
     getOperations(from, to, levenstein(from, to))
   );
-}; 
+};
 
 // given an object that would like to intercept
 // all splice operations performed through a list,
